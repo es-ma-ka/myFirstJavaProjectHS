@@ -1,0 +1,30 @@
+package calculator;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Article> articles = List.of(
+            new Article("Bubblegum", 2.0),
+            new Article("Toffee", 0.2),
+            new Article("Ice cream", 5.0),
+            new Article("Milk chocolate", 4.0),
+            new Article("Doughnut", 2.5),
+            new Article("Pancake", 3.2)
+        );
+
+        System.out.println("Prices:");
+        for (Article article : articles) {
+            System.out.println(article.name + ": $" + article.price);
+        };
+    }
+}
+
+class Article {
+    String name;
+    double price;
+        
+    Article(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+}
